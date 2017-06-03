@@ -2,11 +2,56 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title></title>
+    <title>ROTMG Ring Comparer</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="script.js" charset="utf-8"></script>
+    <style media="screen">
+    </style>
   </head>
   <body>
-    RotMG accessory power analyzer coming soon, testing testing 123<br>
-    Most of the code will be copied from <a href="https://curlip.github.io/rotmg-item-calculator/">Curlip's item viewer</a>, sorry :(
-    <img src="proto.png">
+    <div id="input">
+    <div><table><thead><tr>
+      <td></td>
+      <td>ATT</td>
+      <td>DEF</td>
+      <td>SPD</td>
+      <td>DEX</td>
+      <td>VIT</td>
+      <td>WIS</td>
+      <td>HP</td>
+      <td>MP</td>
+      <td><abbr title="On some Nilly's Realm items">LUCK</abbr></td>
+      <td>FAME</td>
+    </tr></thead><tbody><tr>
+      <td><abbr title="The amount of points each stat point is worth">VALUE</abbr></td>
+      <td><div contenteditable="true">1</div></td>
+      <td><div contenteditable="true">1</div></td>
+      <td><div contenteditable="true">1</div></td>
+      <td><div contenteditable="true">1</div></td>
+      <td><div contenteditable="true">1</div></td>
+      <td><div contenteditable="true">1</div></td>
+      <td><div contenteditable="true">0.05</div></td>
+      <td><div contenteditable="true">0.05</div></td>
+      <td><div contenteditable="true">1.5</div></td>
+      <td><div contenteditable="true">1.5</div></td>
+    </tr><tr>
+      <td><abbr title="Exponent, makes higher stats worth more. With 2 EXPO and 1 VALUE, 1 defense is worth 1 point, but 2 defense is worth 4 and 7 defense is worth 49 points">EXPO</abbr></td>
+      <td><div contenteditable="true">1</div></td>
+      <td><div contenteditable="true">1</div></td>
+      <td><div contenteditable="true">1</div></td>
+      <td><div contenteditable="true">1</div></td>
+      <td><div contenteditable="true">1</div></td>
+      <td><div contenteditable="true">1</div></td>
+      <td><div contenteditable="true">1</div></td>
+      <td><div contenteditable="true">1</div></td>
+      <td><div contenteditable="true">1</div></td>
+      <td><div contenteditable="true">1.2</div></td>
+    </tr></tbody></table></div>
+    <div><strong>Static Link, XML URLs</strong><br><textarea id="xmlin">https://static.drips.pw/rotmg/production/current</textarea></div>
+    <div><strong>Input/Output XML</strong><br><textarea id="xmlout"></textarea></div>
+  </div>
+    <div id="output">You need to enable Javascript here and XHR from static.drips.pw for this to work (or to wait, if that's already active)
+    <img src="proto.png"></div>
   </body>
 </html>
