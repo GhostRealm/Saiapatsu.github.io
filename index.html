@@ -11,7 +11,7 @@
   </head>
   <body>
     <div id="input">
-    <div><table><thead><tr>
+    <div><table><thead><tr id="label">
       <td></td>
       <td>ATT</td>
       <td>DEF</td>
@@ -21,9 +21,9 @@
       <td>WIS</td>
       <td>HP</td>
       <td>MP</td>
-      <td><abbr title="On some Nilly's Realm items">LUCK</abbr></td>
+      <td>LUCK</td>
       <td>FAME</td>
-    </tr></thead><tbody><tr>
+    </tr></thead><tbody><tr id="value">
       <td><abbr title="The amount of points each stat point is worth">VALUE</abbr></td>
       <td><div contenteditable="true">1</div></td>
       <td><div contenteditable="true">1</div></td>
@@ -34,8 +34,8 @@
       <td><div contenteditable="true">0.05</div></td>
       <td><div contenteditable="true">0.05</div></td>
       <td><div contenteditable="true">1.5</div></td>
-      <td><div contenteditable="true">1.5</div></td>
-    </tr><tr>
+      <td><div contenteditable="true">0</div></td>
+    </tr><tr id="expo">
       <td><abbr title="Exponent, makes higher stats worth more. With 2 EXPO and 1 VALUE, 1 defense is worth 1 point, but 2 defense is worth 4 and 7 defense is worth 49 points">EXPO</abbr></td>
       <td><div contenteditable="true">1</div></td>
       <td><div contenteditable="true">1</div></td>
@@ -46,12 +46,16 @@
       <td><div contenteditable="true">1</div></td>
       <td><div contenteditable="true">1</div></td>
       <td><div contenteditable="true">1</div></td>
-      <td><div contenteditable="true">1.2</div></td>
+      <td><div contenteditable="true">1</div></td>
     </tr></tbody></table></div>
-    <div><strong>Static Link, XML URLs</strong><br><textarea id="xmlin">https://static.drips.pw/rotmg/production/current</textarea></div>
+    <div style="display:none;"><strong>Static Link, XML URLs</strong><br><textarea id="xmlin">http://static.drips.pw/rotmg/production/current</textarea></div>
     <div><strong>Input/Output XML</strong><br><textarea id="xmlout"></textarea></div>
   </div>
-    <div id="output">You need to enable Javascript here and XHR from static.drips.pw for this to work (or to wait, if that's already active)
+    <div id="output">
+      <div class="item">
+
+      </div>
+      You need to enable Javascript here and XHR from static.drips.pw for this to work (or to wait, if that's already active)
     <img src="proto.png"></div>
   </body>
 </html>

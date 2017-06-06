@@ -7,6 +7,9 @@ abbr {
   border-bottom: 1px dotted;
   cursor: help;
 }
+#input {
+  margin-bottom: 8px;
+}
 #input>div {
   float:left;
   margin-right: 8px;
@@ -36,7 +39,7 @@ tbody>tr>td {
   border-bottom: 1px solid #ddd;
 }
 thead>tr>td {
-  border-bottom:2px solid #ddd
+  border-bottom: 2px solid #ddd
 }
 td>div {
   min-width: 1em;
