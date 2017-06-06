@@ -53,9 +53,10 @@ function getConfig(out) {
 function readXML(data) {
   $.each($($.parseXML(data)).find("Object"), function(i, ele){
     if ($(ele).find("SlotType").text() == "9") {
-      items.push(new Item($(ele), "http://static.drips.pw/rotmg/production/current"));
+      items.push(new Item($(ele), "https://static.drips.pw/rotmg/production/current"));
     }
   });
+  console.log(data);
 }
 
 function load(){
@@ -75,7 +76,7 @@ function load(){
   readXML('<?xml version="1.0" encoding="ISO-8859-1"?>\n\n<Objects>\n' + $("#xmlout").val() + '\n</Objects>');
   // $.each($($.parseXML('<?xml version="1.0" encoding="ISO-8859-1"?>\n\n<Objects>\n' + $("#xmlout").val() + '\n</Objects>')).find("Object"), function(i, ele){
   //   if ($(ele).find("SlotType").text() == "9") {
-  //     items.push(new Item($(ele), "http://static.drips.pw/rotmg/production/current"));
+  //     items.push(new Item($(ele), "https://static.drips.pw/rotmg/production/current"));
   //   }
   // });
   // console.log(items);
@@ -114,7 +115,6 @@ function Item(xml, url){
     }
 
     this.url = url;
-
     this.spriteFile = xml.find("File").text().replace("Embed","") + ".png";
     this.spriteRef = xml.find("Index").text();
 
