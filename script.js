@@ -31,7 +31,7 @@ function loadXML(url){
     });
 }
 
-function notNaN(number, foo) {
+function notNaN(number, foo, labels) {
   // I'm going to hell for this :DDDDDDDD
   number = Number(number)
   return isNaN(number) ? dconf[labels[i+1].innerHTML][foo] : number;
@@ -43,8 +43,8 @@ function getConfig(out) {
     let expos = $("#expo>td>div");
     for (var i = 0; i < values.length; i++) {
       out[labels[i+1].innerHTML] = [
-        notNaN(values[i].innerHTML, 0),
-        notNaN(expos[i].innerHTML, 1)
+        notNaN(values[i].innerHTML, 0, labels),
+        notNaN(expos[i].innerHTML, 1, labels)
         // || 0,
       ];
     }
