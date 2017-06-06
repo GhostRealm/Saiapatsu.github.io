@@ -1,0 +1,1281 @@
+<Object type="0xa41" id="Snake Eye Ring">
+   <Class>Equipment</Class>
+   <Item/>
+   <Texture>
+      <File>lofiObj2</File>
+      <Index>0x02</Index>
+   </Texture>
+   <SlotType>9</SlotType>
+   <Description>A ring made from the eye of the Snake Queen.</Description>
+   <ActivateOnEquip stat="20" amount="3">IncrementStat</ActivateOnEquip>
+   <ActivateOnEquip stat="22" amount="3">IncrementStat</ActivateOnEquip>
+   <BagType>4</BagType>
+   <feedPower>200</feedPower>
+   <Soulbound/>
+</Object>
+<Object type="0x708" id="Spider's Eye Ring">
+   <Class>Equipment</Class>
+   <Item/>
+   <Texture>
+      <File>lofiObj2</File>
+      <Index>0x21</Index>
+   </Texture>
+   <SlotType>9</SlotType>
+   <Description>A ring crafted from the faceted eye of an enormous spider.</Description>
+   <ActivateOnEquip stat="26" amount="3">IncrementStat</ActivateOnEquip>
+   <ActivateOnEquip stat="27" amount="3">IncrementStat</ActivateOnEquip>
+   <BagType>4</BagType>
+   <feedPower>200</feedPower>
+   <Soulbound/>
+</Object>
+<Object type="0xa4f" id="Ring of Minor Defense">
+   <Class>Equipment</Class>
+   <Item/>
+   <Texture>
+      <File>lofiObj</File>
+      <Index>0x2c</Index>
+   </Texture>
+   <SlotType>9</SlotType>
+   <Tier>0</Tier>
+   <Description>A silver ring that buzzes with a faint magical hum.</Description>
+   <ActivateOnEquip stat="21" amount="1">IncrementStat</ActivateOnEquip>
+   <BagType>1</BagType>
+   <feedPower>5</feedPower>
+</Object>
+<Object type="0xa24" id="Ring of Attack">
+   <Class>Equipment</Class>
+   <Item/>
+   <Texture>
+      <File>lofiObj5</File>
+      <Index>0x80</Index>
+   </Texture>
+   <SlotType>9</SlotType>
+   <Tier>1</Tier>
+   <Description>A spinel set in a silver ring.</Description>
+   <ActivateOnEquip stat="20" amount="3">IncrementStat</ActivateOnEquip>
+   <BagType>1</BagType>
+   <feedPower>20</feedPower>
+</Object>
+<Object type="0xa25" id="Ring of Defense">
+   <Class>Equipment</Class>
+   <Item/>
+   <Texture>
+      <File>lofiObj5</File>
+      <Index>0x81</Index>
+   </Texture>
+   <SlotType>9</SlotType>
+   <Tier>1</Tier>
+   <Description>An onyx set in a silver ring.</Description>
+   <ActivateOnEquip stat="21" amount="3">IncrementStat</ActivateOnEquip>
+   <BagType>1</BagType>
+   <feedPower>20</feedPower>
+</Object>
+<Object type="0xa26" id="Ring of Speed">
+   <Class>Equipment</Class>
+   <Item/>
+   <Texture>
+      <File>lofiObj5</File>
+      <Index>0x82</Index>
+   </Texture>
+   <SlotType>9</SlotType>
+   <Tier>1</Tier>
+   <Description>An emerald set in a silver ring.</Description>
+   <ActivateOnEquip stat="22" amount="3">IncrementStat</ActivateOnEquip>
+   <BagType>1</BagType>
+   <feedPower>20</feedPower>
+</Object>
+<Object type="0xa36" id="Ring of Vitality">
+   <Class>Equipment</Class>
+   <Item/>
+   <Texture>
+      <File>lofiObj5</File>
+      <Index>0x83</Index>
+   </Texture>
+   <SlotType>9</SlotType>
+   <Tier>1</Tier>
+   <Description>A ruby set in a silver ring.</Description>
+   <ActivateOnEquip stat="26" amount="3">IncrementStat</ActivateOnEquip>
+   <BagType>1</BagType>
+   <feedPower>20</feedPower>
+</Object>
+<Object type="0xa37" id="Ring of Wisdom">
+   <Class>Equipment</Class>
+   <Item/>
+   <Texture>
+      <File>lofiObj5</File>
+      <Index>0x84</Index>
+   </Texture>
+   <SlotType>9</SlotType>
+   <Tier>1</Tier>
+   <Description>A sapphire set in a silver ring.</Description>
+   <ActivateOnEquip stat="27" amount="3">IncrementStat</ActivateOnEquip>
+   <BagType>1</BagType>
+   <feedPower>20</feedPower>
+</Object>
+<Object type="0xa4d" id="Ring of Dexterity">
+   <Class>Equipment</Class>
+   <Item/>
+   <Texture>
+      <File>lofiObj5</File>
+      <Index>0x85</Index>
+   </Texture>
+   <SlotType>9</SlotType>
+   <Tier>1</Tier>
+   <Description>A citrine set in a silver ring.</Description>
+   <ActivateOnEquip stat="28" amount="3">IncrementStat</ActivateOnEquip>
+   <BagType>1</BagType>
+   <feedPower>20</feedPower>
+</Object>
+<Object type="0xa27" id="Ring of Health">
+   <Class>Equipment</Class>
+   <Item/>
+   <Texture>
+      <File>lofiObj5</File>
+      <Index>0x86</Index>
+   </Texture>
+   <SlotType>9</SlotType>
+   <Tier>1</Tier>
+   <Description>A topaz set in a silver ring.</Description>
+   <ActivateOnEquip stat="0" amount="40">IncrementStat</ActivateOnEquip>
+   <BagType>1</BagType>
+   <feedPower>20</feedPower>
+</Object>
+<Object type="0xa28" id="Ring of Magic">
+   <Class>Equipment</Class>
+   <Item/>
+   <Texture>
+      <File>lofiObj5</File>
+      <Index>0x87</Index>
+   </Texture>
+   <SlotType>9</SlotType>
+   <Tier>1</Tier>
+   <Description>An amethyst set in a silver ring.</Description>
+   <ActivateOnEquip stat="3" amount="40">IncrementStat</ActivateOnEquip>
+   <BagType>1</BagType>
+   <feedPower>20</feedPower>
+</Object>
+<Object type="0xa29" id="Ring of Greater Attack">
+   <Class>Equipment</Class>
+   <Item/>
+   <Texture>
+      <File>lofiObj5</File>
+      <Index>0x90</Index>
+   </Texture>
+   <SlotType>9</SlotType>
+   <Tier>2</Tier>
+   <Description>A spinel set in a gold ring.</Description>
+   <ActivateOnEquip stat="20" amount="5">IncrementStat</ActivateOnEquip>
+   <BagType>2</BagType>
+   <FameBonus>1</FameBonus>
+   <feedPower>37</feedPower>
+</Object>
+<Object type="0xa2a" id="Ring of Greater Defense">
+   <Class>Equipment</Class>
+   <Item/>
+   <Texture>
+      <File>lofiObj5</File>
+      <Index>0x91</Index>
+   </Texture>
+   <SlotType>9</SlotType>
+   <Tier>2</Tier>
+   <Description>An onyx set in a gold ring.</Description>
+   <ActivateOnEquip stat="21" amount="5">IncrementStat</ActivateOnEquip>
+   <BagType>2</BagType>
+   <FameBonus>1</FameBonus>
+   <feedPower>37</feedPower>
+</Object>
+<Object type="0xa2b" id="Ring of Greater Speed">
+   <Class>Equipment</Class>
+   <Item/>
+   <Texture>
+      <File>lofiObj5</File>
+      <Index>0x92</Index>
+   </Texture>
+   <SlotType>9</SlotType>
+   <Tier>2</Tier>
+   <Description>An emerald set in a gold ring.</Description>
+   <ActivateOnEquip stat="22" amount="5">IncrementStat</ActivateOnEquip>
+   <BagType>2</BagType>
+   <FameBonus>1</FameBonus>
+   <feedPower>37</feedPower>
+</Object>
+<Object type="0xa38" id="Ring of Greater Vitality">
+   <Class>Equipment</Class>
+   <Item/>
+   <Texture>
+      <File>lofiObj5</File>
+      <Index>0x93</Index>
+   </Texture>
+   <SlotType>9</SlotType>
+   <Tier>2</Tier>
+   <Description>A ruby set in a gold ring.</Description>
+   <ActivateOnEquip stat="26" amount="5">IncrementStat</ActivateOnEquip>
+   <BagType>2</BagType>
+   <FameBonus>1</FameBonus>
+   <feedPower>37</feedPower>
+</Object>
+<Object type="0xa39" id="Ring of Greater Wisdom">
+   <Class>Equipment</Class>
+   <Item/>
+   <Texture>
+      <File>lofiObj5</File>
+      <Index>0x94</Index>
+   </Texture>
+   <SlotType>9</SlotType>
+   <Tier>2</Tier>
+   <Description>A sapphire set in a gold ring.</Description>
+   <ActivateOnEquip stat="27" amount="5">IncrementStat</ActivateOnEquip>
+   <BagType>2</BagType>
+   <FameBonus>1</FameBonus>
+   <feedPower>37</feedPower>
+</Object>
+<Object type="0xa4e" id="Ring of Greater Dexterity">
+   <Class>Equipment</Class>
+   <Item/>
+   <Texture>
+      <File>lofiObj5</File>
+      <Index>0x95</Index>
+   </Texture>
+   <SlotType>9</SlotType>
+   <Tier>2</Tier>
+   <Description>A citrine set in a gold ring.</Description>
+   <ActivateOnEquip stat="28" amount="5">IncrementStat</ActivateOnEquip>
+   <BagType>2</BagType>
+   <FameBonus>1</FameBonus>
+   <feedPower>37</feedPower>
+</Object>
+<Object type="0xa2c" id="Ring of Greater Health">
+   <Class>Equipment</Class>
+   <Item/>
+   <Texture>
+      <File>lofiObj5</File>
+      <Index>0x96</Index>
+   </Texture>
+   <SlotType>9</SlotType>
+   <Tier>2</Tier>
+   <Description>A topaz set in a gold ring.</Description>
+   <ActivateOnEquip stat="0" amount="80">IncrementStat</ActivateOnEquip>
+   <BagType>2</BagType>
+   <FameBonus>1</FameBonus>
+   <feedPower>37</feedPower>
+</Object>
+<Object type="0xa2d" id="Ring of Greater Magic">
+   <Class>Equipment</Class>
+   <Item/>
+   <Texture>
+      <File>lofiObj5</File>
+      <Index>0x97</Index>
+   </Texture>
+   <SlotType>9</SlotType>
+   <Tier>2</Tier>
+   <Description>An amethyst set in a gold ring.</Description>
+   <ActivateOnEquip stat="3" amount="80">IncrementStat</ActivateOnEquip>
+   <BagType>2</BagType>
+   <FameBonus>1</FameBonus>
+   <feedPower>37</feedPower>
+</Object>
+<Object type="0xab7" id="Ring of Superior Attack">
+   <Class>Equipment</Class>
+   <Item/>
+   <Texture>
+      <File>lofiObj5</File>
+      <Index>0xa0</Index>
+   </Texture>
+   <SlotType>9</SlotType>
+   <Tier>3</Tier>
+   <Description>A large spinel set in a glittering gold ring.</Description>
+   <ActivateOnEquip stat="20" amount="6">IncrementStat</ActivateOnEquip>
+   <BagType>2</BagType>
+   <FameBonus>2</FameBonus>
+   <feedPower>75</feedPower>
+</Object>
+<Object type="0xab8" id="Ring of Superior Defense">
+   <Class>Equipment</Class>
+   <Item/>
+   <Texture>
+      <File>lofiObj5</File>
+      <Index>0xa1</Index>
+   </Texture>
+   <SlotType>9</SlotType>
+   <Tier>3</Tier>
+   <Description>A large onyx set in a glittering gold ring.</Description>
+   <ActivateOnEquip stat="21" amount="6">IncrementStat</ActivateOnEquip>
+   <BagType>2</BagType>
+   <FameBonus>2</FameBonus>
+   <feedPower>75</feedPower>
+</Object>
+<Object type="0xab9" id="Ring of Superior Speed">
+   <Class>Equipment</Class>
+   <Item/>
+   <Texture>
+      <File>lofiObj5</File>
+      <Index>0xa2</Index>
+   </Texture>
+   <SlotType>9</SlotType>
+   <Tier>3</Tier>
+   <Description>A large emerald set in a glittering gold ring.</Description>
+   <ActivateOnEquip stat="22" amount="6">IncrementStat</ActivateOnEquip>
+   <BagType>2</BagType>
+   <FameBonus>2</FameBonus>
+   <feedPower>75</feedPower>
+</Object>
+<Object type="0xaba" id="Ring of Superior Vitality">
+   <Class>Equipment</Class>
+   <Item/>
+   <Texture>
+      <File>lofiObj5</File>
+      <Index>0xa3</Index>
+   </Texture>
+   <SlotType>9</SlotType>
+   <Tier>3</Tier>
+   <Description>A large ruby set in a glittering gold ring.</Description>
+   <ActivateOnEquip stat="26" amount="6">IncrementStat</ActivateOnEquip>
+   <BagType>2</BagType>
+   <FameBonus>2</FameBonus>
+   <feedPower>75</feedPower>
+</Object>
+<Object type="0xabb" id="Ring of Superior Wisdom">
+   <Class>Equipment</Class>
+   <Item/>
+   <Texture>
+      <File>lofiObj5</File>
+      <Index>0xa4</Index>
+   </Texture>
+   <SlotType>9</SlotType>
+   <Tier>3</Tier>
+   <Description>A large sapphire set in a glittering gold ring.</Description>
+   <ActivateOnEquip stat="27" amount="6">IncrementStat</ActivateOnEquip>
+   <BagType>2</BagType>
+   <FameBonus>2</FameBonus>
+   <feedPower>75</feedPower>
+</Object>
+<Object type="0xabc" id="Ring of Superior Dexterity">
+   <Class>Equipment</Class>
+   <Item/>
+   <Texture>
+      <File>lofiObj5</File>
+      <Index>0xa5</Index>
+   </Texture>
+   <SlotType>9</SlotType>
+   <Tier>3</Tier>
+   <Description>A large citrine set in a glittering gold ring.</Description>
+   <ActivateOnEquip stat="28" amount="6">IncrementStat</ActivateOnEquip>
+   <BagType>2</BagType>
+   <FameBonus>2</FameBonus>
+   <feedPower>75</feedPower>
+</Object>
+<Object type="0xabd" id="Ring of Superior Health">
+   <Class>Equipment</Class>
+   <Item/>
+   <Texture>
+      <File>lofiObj5</File>
+      <Index>0xa6</Index>
+   </Texture>
+   <SlotType>9</SlotType>
+   <Tier>3</Tier>
+   <Description>A large topaz set in a glittering gold ring.</Description>
+   <ActivateOnEquip stat="0" amount="100">IncrementStat</ActivateOnEquip>
+   <BagType>2</BagType>
+   <FameBonus>2</FameBonus>
+   <feedPower>75</feedPower>
+</Object>
+<Object type="0xabe" id="Ring of Superior Magic">
+   <Class>Equipment</Class>
+   <Item/>
+   <Texture>
+      <File>lofiObj5</File>
+      <Index>0xa7</Index>
+   </Texture>
+   <SlotType>9</SlotType>
+   <Tier>3</Tier>
+   <Description>A large amethyst set in a glittering gold ring.</Description>
+   <ActivateOnEquip stat="3" amount="100">IncrementStat</ActivateOnEquip>
+   <BagType>2</BagType>
+   <FameBonus>2</FameBonus>
+   <feedPower>75</feedPower>
+</Object>
+<Object type="0xabf" id="Ring of Paramount Attack">
+   <Class>Equipment</Class>
+   <Item/>
+   <Texture>
+      <File>lofiObj5</File>
+      <Index>0xb0</Index>
+   </Texture>
+   <SlotType>9</SlotType>
+   <Tier>4</Tier>
+   <Description>A very large spinel set in a dazzling gold ring.</Description>
+   <ActivateOnEquip stat="20" amount="7">IncrementStat</ActivateOnEquip>
+   <BagType>2</BagType>
+   <FameBonus>3</FameBonus>
+   <feedPower>150</feedPower>
+</Object>
+<Object type="0xac0" id="Ring of Paramount Defense">
+   <Class>Equipment</Class>
+   <Item/>
+   <Texture>
+      <File>lofiObj5</File>
+      <Index>0xb1</Index>
+   </Texture>
+   <SlotType>9</SlotType>
+   <Tier>4</Tier>
+   <Description>A very large onyx set in a dazzling gold ring.</Description>
+   <ActivateOnEquip stat="21" amount="7">IncrementStat</ActivateOnEquip>
+   <BagType>2</BagType>
+   <FameBonus>3</FameBonus>
+   <feedPower>150</feedPower>
+</Object>
+<Object type="0xac1" id="Ring of Paramount Speed">
+   <Class>Equipment</Class>
+   <Item/>
+   <Texture>
+      <File>lofiObj5</File>
+      <Index>0xb2</Index>
+   </Texture>
+   <SlotType>9</SlotType>
+   <Tier>4</Tier>
+   <Description>A very large emerald set in a dazzling gold ring.</Description>
+   <ActivateOnEquip stat="22" amount="7">IncrementStat</ActivateOnEquip>
+   <BagType>2</BagType>
+   <FameBonus>3</FameBonus>
+   <feedPower>150</feedPower>
+</Object>
+<Object type="0xac2" id="Ring of Paramount Vitality">
+   <Class>Equipment</Class>
+   <Item/>
+   <Texture>
+      <File>lofiObj5</File>
+      <Index>0xb3</Index>
+   </Texture>
+   <SlotType>9</SlotType>
+   <Tier>4</Tier>
+   <Description>A very large ruby set in a dazzling gold ring.</Description>
+   <ActivateOnEquip stat="26" amount="7">IncrementStat</ActivateOnEquip>
+   <BagType>2</BagType>
+   <FameBonus>3</FameBonus>
+   <feedPower>150</feedPower>
+</Object>
+<Object type="0xac3" id="Ring of Paramount Wisdom">
+   <Class>Equipment</Class>
+   <Item/>
+   <Texture>
+      <File>lofiObj5</File>
+      <Index>0xb4</Index>
+   </Texture>
+   <SlotType>9</SlotType>
+   <Tier>4</Tier>
+   <Description>A very large sapphire set in a dazzling gold ring.</Description>
+   <ActivateOnEquip stat="27" amount="7">IncrementStat</ActivateOnEquip>
+   <BagType>2</BagType>
+   <FameBonus>3</FameBonus>
+   <feedPower>150</feedPower>
+</Object>
+<Object type="0xac4" id="Ring of Paramount Dexterity">
+   <Class>Equipment</Class>
+   <Item/>
+   <Texture>
+      <File>lofiObj5</File>
+      <Index>0xb5</Index>
+   </Texture>
+   <SlotType>9</SlotType>
+   <Tier>4</Tier>
+   <Description>A very large citrine set in a dazzling gold ring.</Description>
+   <ActivateOnEquip stat="28" amount="7">IncrementStat</ActivateOnEquip>
+   <BagType>2</BagType>
+   <FameBonus>3</FameBonus>
+   <feedPower>150</feedPower>
+</Object>
+<Object type="0xac5" id="Ring of Paramount Health">
+   <Class>Equipment</Class>
+   <Item/>
+   <Texture>
+      <File>lofiObj5</File>
+      <Index>0xb6</Index>
+   </Texture>
+   <SlotType>9</SlotType>
+   <Tier>4</Tier>
+   <Description>A very large topaz set in a dazzling gold ring.</Description>
+   <ActivateOnEquip stat="0" amount="120">IncrementStat</ActivateOnEquip>
+   <BagType>2</BagType>
+   <FameBonus>3</FameBonus>
+   <feedPower>150</feedPower>
+</Object>
+<Object type="0xac6" id="Ring of Paramount Magic">
+   <Class>Equipment</Class>
+   <Item/>
+   <Texture>
+      <File>lofiObj5</File>
+      <Index>0xb7</Index>
+   </Texture>
+   <SlotType>9</SlotType>
+   <Tier>4</Tier>
+   <Description>A very large amethyst set in a dazzling gold ring.</Description>
+   <ActivateOnEquip stat="3" amount="120">IncrementStat</ActivateOnEquip>
+   <BagType>2</BagType>
+   <FameBonus>3</FameBonus>
+   <feedPower>150</feedPower>
+</Object>
+<Object type="0xac7" id="Ring of Exalted Attack">
+   <Class>Equipment</Class>
+   <Item/>
+   <Texture>
+      <File>lofiObj5</File>
+      <Index>0xc0</Index>
+   </Texture>
+   <SlotType>9</SlotType>
+   <Tier>5</Tier>
+   <Description>A huge, flawless spinel set in a stunningly beautiful gold ring.</Description>
+   <ActivateOnEquip stat="20" amount="8">IncrementStat</ActivateOnEquip>
+   <BagType>4</BagType>
+   <FameBonus>4</FameBonus>
+   <feedPower>300</feedPower>
+</Object>
+<Object type="0xac8" id="Ring of Exalted Defense">
+   <Class>Equipment</Class>
+   <Item/>
+   <Texture>
+      <File>lofiObj5</File>
+      <Index>0xc1</Index>
+   </Texture>
+   <SlotType>9</SlotType>
+   <Tier>5</Tier>
+   <Description>A huge, flawless onyx set in a stunningly beautiful gold ring.</Description>
+   <ActivateOnEquip stat="21" amount="8">IncrementStat</ActivateOnEquip>
+   <BagType>4</BagType>
+   <FameBonus>4</FameBonus>
+   <feedPower>300</feedPower>
+</Object>
+<Object type="0xac9" id="Ring of Exalted Speed">
+   <Class>Equipment</Class>
+   <Item/>
+   <Texture>
+      <File>lofiObj5</File>
+      <Index>0xc2</Index>
+   </Texture>
+   <SlotType>9</SlotType>
+   <Tier>5</Tier>
+   <Description>A huge, flawless emerald set in a stunningly beautiful gold ring.</Description>
+   <ActivateOnEquip stat="22" amount="8">IncrementStat</ActivateOnEquip>
+   <BagType>4</BagType>
+   <FameBonus>4</FameBonus>
+   <feedPower>300</feedPower>
+</Object>
+<Object type="0xaca" id="Ring of Exalted Vitality">
+   <Class>Equipment</Class>
+   <Item/>
+   <Texture>
+      <File>lofiObj5</File>
+      <Index>0xc3</Index>
+   </Texture>
+   <SlotType>9</SlotType>
+   <Tier>5</Tier>
+   <Description>A huge, flawless ruby set in a stunningly beautiful gold ring.</Description>
+   <ActivateOnEquip stat="26" amount="8">IncrementStat</ActivateOnEquip>
+   <BagType>4</BagType>
+   <FameBonus>4</FameBonus>
+   <feedPower>300</feedPower>
+</Object>
+<Object type="0xacb" id="Ring of Exalted Wisdom">
+   <Class>Equipment</Class>
+   <Item/>
+   <Texture>
+      <File>lofiObj5</File>
+      <Index>0xc4</Index>
+   </Texture>
+   <SlotType>9</SlotType>
+   <Tier>5</Tier>
+   <Description>A huge, flawless sapphire set in a stunningly beautiful gold ring.</Description>
+   <ActivateOnEquip stat="27" amount="8">IncrementStat</ActivateOnEquip>
+   <BagType>4</BagType>
+   <FameBonus>4</FameBonus>
+   <feedPower>300</feedPower>
+</Object>
+<Object type="0xacc" id="Ring of Exalted Dexterity">
+   <Class>Equipment</Class>
+   <Item/>
+   <Texture>
+      <File>lofiObj5</File>
+      <Index>0xc5</Index>
+   </Texture>
+   <SlotType>9</SlotType>
+   <Tier>5</Tier>
+   <Description>A huge, flawless citrine set in a stunningly beautiful gold ring.</Description>
+   <ActivateOnEquip stat="28" amount="8">IncrementStat</ActivateOnEquip>
+   <BagType>4</BagType>
+   <FameBonus>4</FameBonus>
+   <feedPower>300</feedPower>
+</Object>
+<Object type="0xacd" id="Ring of Exalted Health">
+   <Class>Equipment</Class>
+   <Item/>
+   <Texture>
+      <File>lofiObj5</File>
+      <Index>0xc6</Index>
+   </Texture>
+   <SlotType>9</SlotType>
+   <Tier>5</Tier>
+   <Description>A huge, flawless topaz set in a stunningly beautiful gold ring.</Description>
+   <ActivateOnEquip stat="0" amount="140">IncrementStat</ActivateOnEquip>
+   <BagType>4</BagType>
+   <FameBonus>4</FameBonus>
+   <feedPower>300</feedPower>
+</Object>
+<Object type="0xace" id="Ring of Exalted Magic">
+   <Class>Equipment</Class>
+   <Item/>
+   <Texture>
+      <File>lofiObj5</File>
+      <Index>0xc7</Index>
+   </Texture>
+   <SlotType>9</SlotType>
+   <Tier>5</Tier>
+   <Description>A huge, flawless amethyst set in a stunningly beautiful gold ring.</Description>
+   <ActivateOnEquip stat="3" amount="140">IncrementStat</ActivateOnEquip>
+   <BagType>4</BagType>
+   <FameBonus>4</FameBonus>
+   <feedPower>300</feedPower>
+</Object>
+<Object type="0xba3" id="Ring of Unbound Attack">
+   <Class>Equipment</Class>
+   <Item/>
+   <Texture>
+      <File>lofiObj3</File>
+      <Index>0x488</Index>
+   </Texture>
+   <SlotType>9</SlotType>
+   <Tier>6</Tier>
+   <Description>A huge, flawless spinel set in a stunningly beautiful gold ring.</Description>
+   <ActivateOnEquip stat="20" amount="9">IncrementStat</ActivateOnEquip>
+   <BagType>4</BagType>
+   <FameBonus>5</FameBonus>
+   <feedPower>325</feedPower>
+</Object>
+<Object type="0xba4" id="Ring of Unbound Defense">
+   <Class>Equipment</Class>
+   <Item/>
+   <Texture>
+      <File>lofiObj3</File>
+      <Index>0x489</Index>
+   </Texture>
+   <SlotType>9</SlotType>
+   <Tier>6</Tier>
+   <Description>A huge, flawless onyx set in a stunningly beautiful gold ring.</Description>
+   <ActivateOnEquip stat="21" amount="9">IncrementStat</ActivateOnEquip>
+   <BagType>4</BagType>
+   <FameBonus>5</FameBonus>
+   <feedPower>325</feedPower>
+</Object>
+<Object type="0xba5" id="Ring of Unbound Speed">
+   <Class>Equipment</Class>
+   <Item/>
+   <Texture>
+      <File>lofiObj3</File>
+      <Index>0x48a</Index>
+   </Texture>
+   <SlotType>9</SlotType>
+   <Tier>6</Tier>
+   <Description>A huge, flawless emerald set in a stunningly beautiful gold ring.</Description>
+   <ActivateOnEquip stat="22" amount="9">IncrementStat</ActivateOnEquip>
+   <BagType>4</BagType>
+   <FameBonus>5</FameBonus>
+   <feedPower>325</feedPower>
+</Object>
+<Object type="0xba6" id="Ring of Unbound Vitality">
+   <Class>Equipment</Class>
+   <Item/>
+   <Texture>
+      <File>lofiObj3</File>
+      <Index>0x48b</Index>
+   </Texture>
+   <SlotType>9</SlotType>
+   <Tier>6</Tier>
+   <Description>A huge, flawless ruby set in a stunningly beautiful gold ring.</Description>
+   <ActivateOnEquip stat="26" amount="9">IncrementStat</ActivateOnEquip>
+   <BagType>4</BagType>
+   <FameBonus>5</FameBonus>
+   <feedPower>325</feedPower>
+</Object>
+<Object type="0xba7" id="Ring of Unbound Wisdom">
+   <Class>Equipment</Class>
+   <Item/>
+   <Texture>
+      <File>lofiObj3</File>
+      <Index>0x48c</Index>
+   </Texture>
+   <SlotType>9</SlotType>
+   <Tier>6</Tier>
+   <Description>A huge, flawless sapphire set in a stunningly beautiful gold ring.</Description>
+   <ActivateOnEquip stat="27" amount="9">IncrementStat</ActivateOnEquip>
+   <BagType>4</BagType>
+   <FameBonus>5</FameBonus>
+   <feedPower>325</feedPower>
+</Object>
+<Object type="0xba8" id="Ring of Unbound Dexterity">
+   <Class>Equipment</Class>
+   <Item/>
+   <Texture>
+      <File>lofiObj3</File>
+      <Index>0x48d</Index>
+   </Texture>
+   <SlotType>9</SlotType>
+   <Tier>6</Tier>
+   <Description>A huge, flawless citrine set in a stunningly beautiful gold ring.</Description>
+   <ActivateOnEquip stat="28" amount="9">IncrementStat</ActivateOnEquip>
+   <BagType>4</BagType>
+   <FameBonus>5</FameBonus>
+   <feedPower>325</feedPower>
+</Object>
+<Object type="0xba9" id="Ring of Unbound Health">
+   <Class>Equipment</Class>
+   <Item/>
+   <Texture>
+      <File>lofiObj3</File>
+      <Index>0x48e</Index>
+   </Texture>
+   <SlotType>9</SlotType>
+   <Description>A huge, flawless topaz set in a stunningly beautiful gold ring.</Description>
+   <ActivateOnEquip stat="0" amount="180">IncrementStat</ActivateOnEquip>
+   <BagType>4</BagType>
+   <FameBonus>5</FameBonus>
+   <feedPower>325</feedPower>
+</Object>
+<Object type="0xbae" id="Ring of Decades">
+   <Class>Equipment</Class>
+   <Item/>
+   <Texture>
+      <File>lofiObj3</File>
+      <Index>0x564</Index>
+   </Texture>
+   <SlotType>9</SlotType>
+   <Tier>6</Tier>
+   <Description>Cut from a fallen star, a deep purple emanating an unearthly glow, hinting at the power fused within.</Description>
+   <ActivateOnEquip stat="0" amount="190">IncrementStat</ActivateOnEquip>
+   <BagType>4</BagType>
+   <FameBonus>5</FameBonus>
+   <feedPower>350</feedPower>
+</Object>
+<Object type="0xbaa" id="Ring of Unbound Magic">
+   <Class>Equipment</Class>
+   <Item/>
+   <Texture>
+      <File>lofiObj3</File>
+      <Index>0x48f</Index>
+   </Texture>
+   <SlotType>9</SlotType>
+   <Tier>6</Tier>
+   <Description>A huge, flawless amethyst set in a stunningly beautiful gold ring.</Description>
+   <ActivateOnEquip stat="3" amount="180">IncrementStat</ActivateOnEquip>
+   <BagType>4</BagType>
+   <FameBonus>5</FameBonus>
+   <feedPower>325</feedPower>
+</Object>
+<Object type="0xbab" id="The Forgotten Crown">
+   <Class>Equipment</Class>
+   <Item/>
+   <Texture>
+      <File>lofiObj3</File>
+      <Index>0x480</Index>
+   </Texture>
+   <SlotType>9</SlotType>
+   <Description>An eerie reminder of what lays in the depths of the Shatters.</Description>
+   <ActivateOnEquip stat="28" amount="6">IncrementStat</ActivateOnEquip>
+   <ActivateOnEquip stat="20" amount="6">IncrementStat</ActivateOnEquip>
+   <ActivateOnEquip stat="0" amount="110">IncrementStat</ActivateOnEquip>
+   <BagType>6</BagType>
+   <FameBonus>5</FameBonus>
+   <feedPower>500</feedPower>
+   <Soulbound/>
+</Object>
+<Object type="0xbac" id="The Twilight Gemstone">
+   <Class>Equipment</Class>
+   <Item/>
+   <Texture>
+      <File>lofiObj3</File>
+      <Index>0x481</Index>
+   </Texture>
+   <SlotType>9</SlotType>
+   <Description>An odd stone, emanating a dark and mysterious energy.</Description>
+   <ActivateOnEquip stat="22" amount="6">IncrementStat</ActivateOnEquip>
+   <ActivateOnEquip stat="21" amount="6">IncrementStat</ActivateOnEquip>
+   <ActivateOnEquip stat="3" amount="110">IncrementStat</ActivateOnEquip>
+   <BagType>6</BagType>
+   <FameBonus>5</FameBonus>
+   <feedPower>500</feedPower>
+   <Soulbound/>
+</Object>
+<Object type="0xbad" id="Bracer of the Guardian">
+   <Class>Equipment</Class>
+   <Item/>
+   <Texture>
+      <File>lofiObj3</File>
+      <Index>0x482</Index>
+   </Texture>
+   <SlotType>9</SlotType>
+   <Description>Wearing it makes you feel particularly strong.</Description>
+   <ActivateOnEquip stat="21" amount="6">IncrementStat</ActivateOnEquip>
+   <ActivateOnEquip stat="20" amount="6">IncrementStat</ActivateOnEquip>
+   <ActivateOnEquip stat="0" amount="60">IncrementStat</ActivateOnEquip>
+   <ActivateOnEquip stat="3" amount="60">IncrementStat</ActivateOnEquip>
+   <BagType>6</BagType>
+   <FameBonus>5</FameBonus>
+   <feedPower>500</feedPower>
+   <Soulbound/>
+</Object>
+<Object type="0xba0" id="Ring of the Sphinx">
+   <Class>Equipment</Class>
+   <Item/>
+   <Texture>
+      <File>lofiObj4</File>
+      <Index>0xa0</Index>
+   </Texture>
+   <SlotType>9</SlotType>
+   <Description>The malachite stone makes you feel at peace with the land.</Description>
+   <ActivateOnEquip stat="27" amount="4">IncrementStat</ActivateOnEquip>
+   <ActivateOnEquip stat="28" amount="4">IncrementStat</ActivateOnEquip>
+   <ActivateOnEquip stat="3" amount="100">IncrementStat</ActivateOnEquip>
+   <BagType>6</BagType>
+   <FameBonus>5</FameBonus>
+   <feedPower>500</feedPower>
+   <Soulbound/>
+</Object>
+<Object type="0xba1" id="Ring of the Nile">
+   <Class>Equipment</Class>
+   <Item/>
+   <Texture>
+      <File>lofiObj4</File>
+      <Index>0xa1</Index>
+   </Texture>
+   <SlotType>9</SlotType>
+   <Description>The azule stone makes you feel ready for any situation.</Description>
+   <ActivateOnEquip stat="22" amount="4">IncrementStat</ActivateOnEquip>
+   <ActivateOnEquip stat="28" amount="4">IncrementStat</ActivateOnEquip>
+   <ActivateOnEquip stat="0" amount="60">IncrementStat</ActivateOnEquip>
+   <ActivateOnEquip stat="3" amount="60">IncrementStat</ActivateOnEquip>
+   <BagType>6</BagType>
+   <FameBonus>5</FameBonus>
+   <feedPower>900</feedPower>
+   <Soulbound/>
+</Object>
+<Object type="0xba2" id="Ring of the Pyramid">
+   <Class>Equipment</Class>
+   <Item/>
+   <Texture>
+      <File>lofiObj4</File>
+      <Index>0xa2</Index>
+   </Texture>
+   <SlotType>9</SlotType>
+   <Description>The dolomite stone makes you feel able to stand against anything.</Description>
+   <ActivateOnEquip stat="20" amount="4">IncrementStat</ActivateOnEquip>
+   <ActivateOnEquip stat="21" amount="4">IncrementStat</ActivateOnEquip>
+   <ActivateOnEquip stat="0" amount="100">IncrementStat</ActivateOnEquip>
+   <BagType>6</BagType>
+   <FameBonus>5</FameBonus>
+   <feedPower>900</feedPower>
+   <Soulbound/>
+</Object>
+<Object type="0x7fd2" id="Enchanted Ice Shard">
+   <Class>Equipment</Class>
+   <Item/>
+   <Texture>
+      <File>d3LofiObjEmbed</File>
+      <Index>0x6a</Index>
+   </Texture>
+   <SlotType>9</SlotType>
+   <Description>The ice this item is made of doesn't seem to melt.</Description>
+   <ActivateOnEquip stat="27" amount="4">IncrementStat</ActivateOnEquip>
+   <ActivateOnEquip stat="28" amount="4">IncrementStat</ActivateOnEquip>
+   <ActivateOnEquip stat="3" amount="100">IncrementStat</ActivateOnEquip>
+   <BagType>6</BagType>
+   <FameBonus>5</FameBonus>
+   <feedPower>500</feedPower>
+   <Soulbound/>
+</Object>
+<Object type="0x7fd3" id="Ring of the Northern Light">
+   <Class>Equipment</Class>
+   <Item/>
+   <Texture>
+      <File>d3LofiObjEmbed</File>
+      <Index>0x6b</Index>
+   </Texture>
+   <SlotType>9</SlotType>
+   <Description>A mysterious light emanates from the stone.</Description>
+   <ActivateOnEquip stat="22" amount="4">IncrementStat</ActivateOnEquip>
+   <ActivateOnEquip stat="28" amount="4">IncrementStat</ActivateOnEquip>
+   <ActivateOnEquip stat="0" amount="60">IncrementStat</ActivateOnEquip>
+   <ActivateOnEquip stat="3" amount="60">IncrementStat</ActivateOnEquip>
+   <BagType>6</BagType>
+   <FameBonus>5</FameBonus>
+   <feedPower>900</feedPower>
+   <Soulbound/>
+</Object>
+<Object type="0x7fd4" id="Frimarra">
+   <Class>Equipment</Class>
+   <Item/>
+   <Texture>
+      <File>d3LofiObjEmbed</File>
+      <Index>0x6c</Index>
+   </Texture>
+   <SlotType>9</SlotType>
+   <Description>It's said that this necklace was created to protect the mortal lover of an old God.</Description>
+   <ActivateOnEquip stat="20" amount="4">IncrementStat</ActivateOnEquip>
+   <ActivateOnEquip stat="21" amount="4">IncrementStat</ActivateOnEquip>
+   <ActivateOnEquip stat="0" amount="100">IncrementStat</ActivateOnEquip>
+   <BagType>6</BagType>
+   <FameBonus>5</FameBonus>
+   <feedPower>900</feedPower>
+   <Soulbound/>
+</Object>
+<Object type="0xb3e" id="Amulet of Resurrection">
+   <DisplayId>Amulet of Dispersion</DisplayId>
+   <Class>Equipment</Class>
+   <Item/>
+   <Texture>
+      <File>d3LofiObjEmbed</File>
+      <Index>0x46</Index>
+   </Texture>
+   <SlotType>9</SlotType>
+   <Soulbound/>
+   <Description>A historical amulet that has been passed down for generations. Although once cursed in the past, it still holds a hint of its ancient power.</Description>
+   <ActivateOnEquip stat="20" amount="1">IncrementStat</ActivateOnEquip>
+   <ActivateOnEquip stat="21" amount="1">IncrementStat</ActivateOnEquip>
+   <ActivateOnEquip stat="22" amount="1">IncrementStat</ActivateOnEquip>
+   <ActivateOnEquip stat="26" amount="1">IncrementStat</ActivateOnEquip>
+   <ActivateOnEquip stat="27" amount="1">IncrementStat</ActivateOnEquip>
+   <ActivateOnEquip stat="28" amount="1">IncrementStat</ActivateOnEquip>
+   <ActivateOnEquip stat="0" amount="30">IncrementStat</ActivateOnEquip>
+   <ActivateOnEquip stat="3" amount="30">IncrementStat</ActivateOnEquip>
+   <FameBonus>3</FameBonus>
+   <BagType>4</BagType>
+   <feedPower>500</feedPower>
+</Object>
+<Object type="0xc13" id="Coral Ring">
+   <Class>Equipment</Class>
+   <Item/>
+   <Texture>
+      <File>lofiObj2</File>
+      <Index>0x08</Index>
+   </Texture>
+   <SlotType>9</SlotType>
+   <Description>A ring crafted from the dangerous Fire Coral.</Description>
+   <ActivateOnEquip stat="27" amount="5">IncrementStat</ActivateOnEquip>
+   <ActivateOnEquip stat="22" amount="5">IncrementStat</ActivateOnEquip>
+   <ActivateOnEquip stat="3" amount="75">IncrementStat</ActivateOnEquip>
+   <BagType>4</BagType>
+   <FameBonus>4</FameBonus>
+   <feedPower>650</feedPower>
+   <Soulbound/>
+</Object>
+<Object type="0xc17" id="Crystal Bone Ring">
+   <Class>Equipment</Class>
+   <Item/>
+   <Texture>
+      <File>lofiObj2</File>
+      <Index>0x0c</Index>
+   </Texture>
+   <SlotType>9</SlotType>
+   <Description>A ring made from a splinter of crystallized sacrificial bone.</Description>
+   <ActivateOnEquip stat="28" amount="3">IncrementStat</ActivateOnEquip>
+   <ActivateOnEquip stat="27" amount="3">IncrementStat</ActivateOnEquip>
+   <BagType>4</BagType>
+   <feedPower>220</feedPower>
+   <Soulbound/>
+</Object>
+<Object type="0xc20" id="Ring of Divine Faith">
+   <Class>Equipment</Class>
+   <Item/>
+   <Texture>
+      <File>lofiObj2</File>
+      <Index>0x1f</Index>
+   </Texture>
+   <SlotType>9</SlotType>
+   <Description>A ring that symbolizes divine might.</Description>
+   <ActivateOnEquip stat="26" amount="5">IncrementStat</ActivateOnEquip>
+   <ActivateOnEquip stat="27" amount="5">IncrementStat</ActivateOnEquip>
+   <FameBonus>2</FameBonus>
+   <BagType>4</BagType>
+   <feedPower>500</feedPower>
+   <Soulbound/>
+</Object>
+<Object type="0x913" id="Crown (prod)">
+   <Class>Equipment</Class>
+   <Item/>
+   <Texture>
+      <File>lofiObj3</File>
+      <Index>0xc6</Index>
+   </Texture>
+   <SlotType>9</SlotType>
+   <Description>Super regal!</Description>
+   <ActivateOnEquip stat="26" amount="60">IncrementStat</ActivateOnEquip>
+   <ActivateOnEquip stat="27" amount="700">IncrementStat</ActivateOnEquip>
+   <ActivateOnEquip stat="20" amount="20">IncrementStat</ActivateOnEquip>
+   <ActivateOnEquip stat="22" amount="20">IncrementStat</ActivateOnEquip>
+   <BagType>6</BagType>
+   <Soulbound/>
+   <feedPower>0</feedPower>
+</Object>
+<Object type="0xc27" id="Captain's Ring">
+   <Class>Equipment</Class>
+   <Item/>
+   <Texture>
+      <File>lofiObj3</File>
+      <Index>0xc7</Index>
+   </Texture>
+   <SlotType>9</SlotType>
+   <Description>Captain Davy Jones' ring.</Description>
+   <ActivateOnEquip stat="20" amount="3">IncrementStat</ActivateOnEquip>
+   <ActivateOnEquip stat="28" amount="3">IncrementStat</ActivateOnEquip>
+   <ActivateOnEquip stat="0" amount="40">IncrementStat</ActivateOnEquip>
+   <BagType>4</BagType>
+   <FameBonus>2</FameBonus>
+   <feedPower>400</feedPower>
+   <Soulbound/>
+</Object>
+<Object type="0xc2d" id="America Ring">
+   <Class>Equipment</Class>
+   <Item/>
+   <Texture>
+      <File>lofiObj3</File>
+      <Index>0xcd</Index>
+   </Texture>
+   <SlotType>9</SlotType>
+   <Description>An American hero's ring.</Description>
+   <ActivateOnEquip stat="21" amount="1">IncrementStat</ActivateOnEquip>
+   <ActivateOnEquip stat="20" amount="1">IncrementStat</ActivateOnEquip>
+   <ActivateOnEquip stat="26" amount="1">IncrementStat</ActivateOnEquip>
+   <ActivateOnEquip stat="22" amount="1">IncrementStat</ActivateOnEquip>
+   <ActivateOnEquip stat="27" amount="1">IncrementStat</ActivateOnEquip>
+   <ActivateOnEquip stat="28" amount="1">IncrementStat</ActivateOnEquip>
+   <ActivateOnEquip stat="0" amount="20">IncrementStat</ActivateOnEquip>
+   <ActivateOnEquip stat="3" amount="20">IncrementStat</ActivateOnEquip>
+   <BagType>6</BagType>
+   <FameBonus>3</FameBonus>
+   <feedPower>700</feedPower>
+   <Soulbound/>
+</Object>
+<Object type="0xc31" id="Experimental Ring">
+   <Class>Equipment</Class>
+   <Item/>
+   <Texture>
+      <File>lofiObj3</File>
+      <Index>0x1b0</Index>
+   </Texture>
+   <SlotType>9</SlotType>
+   <Description>An early prototype ring.</Description>
+   <ActivateOnEquip stat="0" amount="60">IncrementStat</ActivateOnEquip>
+   <ActivateOnEquip stat="3" amount="60">IncrementStat</ActivateOnEquip>
+   <ActivateOnEquip stat="26" amount="4">IncrementStat</ActivateOnEquip>
+   <ActivateOnEquip stat="21" amount="4">IncrementStat</ActivateOnEquip>
+   <BagType>4</BagType>
+   <FameBonus>4</FameBonus>
+   <feedPower>500</feedPower>
+   <Soulbound/>
+</Object>
+<Object type="0xc3e" id="Gold Medal">
+   <Class>Equipment</Class>
+   <Item/>
+   <Texture>
+      <File>lofiObj3</File>
+      <Index>0x178</Index>
+   </Texture>
+   <SlotType>9</SlotType>
+   <Description>An Olympic gold medal in synchronised swimming.</Description>
+   <ActivateOnEquip stat="28" amount="3">IncrementStat</ActivateOnEquip>
+   <ActivateOnEquip stat="26" amount="3">IncrementStat</ActivateOnEquip>
+   <ActivateOnEquip stat="22" amount="3">IncrementStat</ActivateOnEquip>
+   <FameBonus>3</FameBonus>
+   <BagType>6</BagType>
+   <feedPower>500</feedPower>
+   <Soulbound/>
+</Object>
+<Object type="0xc3f" id="Silver Medal">
+   <Class>Equipment</Class>
+   <Item/>
+   <Texture>
+      <File>lofiObj3</File>
+      <Index>0x179</Index>
+   </Texture>
+   <SlotType>9</SlotType>
+   <Description>An Olympic silver medal in synchronised swimming.</Description>
+   <ActivateOnEquip stat="28" amount="2">IncrementStat</ActivateOnEquip>
+   <ActivateOnEquip stat="26" amount="2">IncrementStat</ActivateOnEquip>
+   <ActivateOnEquip stat="22" amount="2">IncrementStat</ActivateOnEquip>
+   <FameBonus>2</FameBonus>
+   <BagType>6</BagType>
+   <feedPower>350</feedPower>
+   <Soulbound/>
+</Object>
+<Object type="0xc40" id="Bronze Medal">
+   <Class>Equipment</Class>
+   <Item/>
+   <Texture>
+      <File>lofiObj3</File>
+      <Index>0x17a</Index>
+   </Texture>
+   <SlotType>9</SlotType>
+   <Description>An Olympic bronze medal in synchronised swimming.</Description>
+   <ActivateOnEquip stat="28" amount="1">IncrementStat</ActivateOnEquip>
+   <ActivateOnEquip stat="26" amount="1">IncrementStat</ActivateOnEquip>
+   <ActivateOnEquip stat="22" amount="1">IncrementStat</ActivateOnEquip>
+   <FameBonus>1</FameBonus>
+   <BagType>6</BagType>
+   <feedPower>200</feedPower>
+   <Soulbound/>
+</Object>
+<Object type="0xc5f" id="Candy Ring">
+   <Class>Equipment</Class>
+   <Item/>
+   <Texture>
+      <File>lofiObj3</File>
+      <Index>0x28a</Index>
+   </Texture>
+   <SlotType>9</SlotType>
+   <Description>A high-fructose ring that will give you pep, but hurt your concentration.</Description>
+   <ActivateOnEquip stat="22" amount="10">IncrementStat</ActivateOnEquip>
+   <ActivateOnEquip stat="26" amount="10">IncrementStat</ActivateOnEquip>
+   <ActivateOnEquip stat="3" amount="-100">IncrementStat</ActivateOnEquip>
+   <ActivateOnEquip stat="27" amount="-10">IncrementStat</ActivateOnEquip>
+   <BagType>4</BagType>
+   <feedPower>400</feedPower>
+   <Soulbound/>
+</Object>
+<Object type="0x2300" id="Ring of the Burning Sun">
+   <Class>Equipment</Class>
+   <Item/>
+   <Texture>
+      <File>lofiObj3</File>
+      <Index>0x4C9</Index>
+   </Texture>
+   <SlotType>9</SlotType>
+   <Description>A ring forged by the mad god in the flames of the suns surface. Its magic protects its owner from some harm. Original Design by DieGo.</Description>
+   <ActivateOnEquip stat="21" amount="8">IncrementStat</ActivateOnEquip>
+   <BagType>4</BagType>
+   <FameBonus>4</FameBonus>
+   <feedPower>300</feedPower>
+</Object>
+<Object type="0x2338" id="Almandine Ring of Wrath" setType="0x0001" setName="Oryx Awesome Set">
+   <Class>Equipment</Class>
+   <Item/>
+   <Texture>
+      <File>d3LofiObjEmbed</File>
+      <Index>0x01</Index>
+   </Texture>
+   <SlotType>9</SlotType>
+   <Description>Set with stones as red as Oryx's favorite Cabernet Sauvignon.</Description>
+   <ActivateOnEquip stat="0" amount="140">IncrementStat</ActivateOnEquip>
+   <BagType>4</BagType>
+   <FameBonus>4</FameBonus>
+   <feedPower>300</feedPower>
+</Object>
+<Object type="0x235D" id="Geb's Ring of Wisdom" setType="0x0002" setName="Priest of Geb Set">
+   <Class>Equipment</Class>
+   <Item/>
+   <Texture>
+      <File>lofiObj3</File>
+      <Index>0x511</Index>
+   </Texture>
+   <SlotType>9</SlotType>
+   <Description>It is said that the ring attunes it's wearer to the earth and it's life force.</Description>
+   <ActivateOnEquip stat="0" amount="25">IncrementStat</ActivateOnEquip>
+   <ActivateOnEquip stat="3" amount="25">IncrementStat</ActivateOnEquip>
+   <ActivateOnEquip stat="26" amount="5">IncrementStat</ActivateOnEquip>
+   <ActivateOnEquip stat="27" amount="10">IncrementStat</ActivateOnEquip>
+   <BagType>4</BagType>
+   <FameBonus>5</FameBonus>
+   <feedPower>500</feedPower>
+</Object>
+<Object type="0x2361" id="Ring of the Covetous Heart" setType="0x0004" setName="Phylactery Mystic Set">
+   <Class>Equipment</Class>
+   <Item/>
+   <Texture>
+      <File>lofiObj3</File>
+      <Index>0x516</Index>
+   </Texture>
+   <SlotType>9</SlotType>
+   <Description>As I lifted the stone from its resting place it became readily apparent there was more to it than met the eye...</Description>
+   <ActivateOnEquip stat="0" amount="15">IncrementStat</ActivateOnEquip>
+   <ActivateOnEquip stat="3" amount="50">IncrementStat</ActivateOnEquip>
+   <ActivateOnEquip stat="20" amount="5">IncrementStat</ActivateOnEquip>
+   <ActivateOnEquip stat="27" amount="8">IncrementStat</ActivateOnEquip>
+   <BagType>4</BagType>
+   <FameBonus>5</FameBonus>
+   <feedPower>500</feedPower>
+</Object>
+<Object type="0x2365" id="Ring of Pure Wishes" setType="0x0003" setName="Swoll Paladin Set">
+   <Class>Equipment</Class>
+   <Item/>
+   <Texture>
+      <File>lofiObj3</File>
+      <Index>0x51B</Index>
+   </Texture>
+   <SlotType>9</SlotType>
+   <Description>Many do not realize how powerful a kind wish is.</Description>
+   <ActivateOnEquip stat="0" amount="10">IncrementStat</ActivateOnEquip>
+   <ActivateOnEquip stat="3" amount="10">IncrementStat</ActivateOnEquip>
+   <ActivateOnEquip stat="21" amount="5">IncrementStat</ActivateOnEquip>
+   <BagType>4</BagType>
+   <FameBonus>5</FameBonus>
+   <feedPower>500</feedPower>
+</Object>
+<Object type="0x21a3" id="Spectral Ring of Horrors" setType="0x0005" setName="Skuld 2 The ReGhostening Set">
+   <Class>Equipment</Class>
+   <Item/>
+   <Texture>
+      <File>lofiObj3</File>
+      <Index>0x536</Index>
+   </Texture>
+   <SlotType>9</SlotType>
+   <Description>Though the whispers can be heard in your head, they're not THAT loud.</Description>
+   <ActivateOnEquip stat="28" amount="4">IncrementStat</ActivateOnEquip>
+   <ActivateOnEquip stat="22" amount="-2">IncrementStat</ActivateOnEquip>
+   <ActivateOnEquip stat="0" amount="25">IncrementStat</ActivateOnEquip>
+   <BagType>4</BagType>
+   <FameBonus>4</FameBonus>
+   <feedPower>500</feedPower>
+</Object>
+<Object type="0x21aa" id="The Forgotten Ring" setType="0x0006" setName="Twilight Archmage Set">
+   <Class>Equipment</Class>
+   <Item/>
+   <Texture>
+      <File>lofiObj3</File>
+      <Index>0x538</Index>
+   </Texture>
+   <SlotType>9</SlotType>
+   <Description>An unsettling glow looms beneath the ancient gem's surface. Soon enough its power will be unleashed again.</Description>
+   <ActivateOnEquip stat="0" amount="10">IncrementStat</ActivateOnEquip>
+   <ActivateOnEquip stat="3" amount="5">IncrementStat</ActivateOnEquip>
+   <BagType>4</BagType>
+   <FameBonus>4</FameBonus>
+   <feedPower>500</feedPower>
+</Object>
+<Object type="0x7fba" id="Amulet of Drakefyre" setType="0x7fcb" setName="Dragon Tamer Set">
+   <Class>Equipment</Class>
+   <Item/>
+   <Texture>
+      <File>d2LofiObjEmbed</File>
+      <Index>0x03</Index>
+   </Texture>
+   <SlotType>9</SlotType>
+   <Description>Given to the initiates who survive the first challenge.</Description>
+   <ActivateOnEquip stat="0" amount="115">IncrementStat</ActivateOnEquip>
+   <ActivateOnEquip stat="22" amount="5">IncrementStat</ActivateOnEquip>
+   <BagType>4</BagType>
+   <FameBonus>4</FameBonus>
+   <feedPower>500</feedPower>
+   <Soulbound/>
+</Object>
+<Object type="0x16dc" id="Ice Crown">
+   <Class>Equipment</Class>
+   <Item/>
+   <Texture>
+      <File>d2LofiObjEmbed</File>
+      <Index>0x1f</Index>
+   </Texture>
+   <SlotType>9</SlotType>
+   <Description>An ancient artifact, once worn by a corrupt king of the frost realms.\n\nSprite Credits: Poshun</Description>
+   <ActivateOnEquip stat="28" amount="6">IncrementStat</ActivateOnEquip>
+   <ActivateOnEquip stat="20" amount="6">IncrementStat</ActivateOnEquip>
+   <ActivateOnEquip stat="0" amount="110">IncrementStat</ActivateOnEquip>
+   <BagType>6</BagType>
+   <FameBonus>5</FameBonus>
+   <feedPower>500</feedPower>
+   <Soulbound/>
+</Object>
