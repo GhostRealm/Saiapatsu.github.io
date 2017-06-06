@@ -63,7 +63,6 @@ function readXML(data) {
 
 function load(){
   items = [];
-  $("#output").html("");
 
   for (let url of $("#xmlin").val().split("\n")) {
     // url = (url.substr(-4) == ".xml") ? url : url + "/xml/Equip.xml"
@@ -103,6 +102,7 @@ function organize() {
   sorteditems.sort((a, b) => {
     return b.score - a.score;
   });
+  $("#output").html("");
   sorteditems.forEach(function callback(item, i, array) {
       item.drawItem($("#output"));
   });
