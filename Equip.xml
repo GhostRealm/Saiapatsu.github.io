@@ -1,3 +1,6 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<Objects>
 <Object type="0xa41" id="Snake Eye Ring">
    <Class>Equipment</Class>
    <Item/>
@@ -1279,3 +1282,4 @@
    <feedPower>500</feedPower>
    <Soulbound/>
 </Object>
+</Objects>
