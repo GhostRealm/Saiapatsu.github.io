@@ -7,7 +7,7 @@ const stats = {
   28:"DEX",
   26:"VIT",
   27:"WIS",
-  23:"LUCK", // TODO: find out what the real ID is
+  102:"LUCK", // TODO: find out what the real ID is
   24:"FAME" // not expressed in the same way as the rest
 };
 var dconf = {};
@@ -52,11 +52,14 @@ function getConfig(out) {
 
 function readXML(data) {
   // $.each($($.parseXML(data)).find("Object"), function(i, ele){
+  let foo = "";
   $.each($(data).find("Object"), function(i, ele){
     if ($(ele).find("SlotType").text() == "9") {
       items.push(new Item($(ele), "https://static.drips.pw/rotmg/production/current"));
+      foo += "\n   " + ele.outerHTML;
     }
   });
+  console.log(foo);
   // console.log(data);
   // console.log($.parseXML(data));
 }
