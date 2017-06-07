@@ -594,7 +594,7 @@
       <FameBonus>4</FameBonus>
       <feedPower>300</feedPower>
       <DisplayId>Pigeon's Eye Ring</DisplayId>
-   </Object>
+</Object>
 <Object type="0x22C" id="Spectacles">
    <Class>Equipment</Class>
    <Item/>
