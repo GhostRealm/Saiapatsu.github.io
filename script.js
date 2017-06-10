@@ -138,19 +138,22 @@ function Item(xml, url){
 
     //Return html for an Item Sprite
     Item.prototype.drawSprite = function(){
-        row = 0 - (this.spriteRef >>> 4);
-        column = 0 - (this.spriteRef & 0x00F);
+      row = 0 - (this.spriteRef >>> 4);
+      column = 0 - (this.spriteRef & 0x00F);
+      let style = `style="background-image: url(${this.url}/sheets/${this.spriteFile});background-position:${column*48}px ${row*48}px;"`;
+      return `<div class="item-sprite" ${this.spriteRef ? style : ""}></div>`;
+    }
 
-        div = ""
+    Item.prototype.stringifyStats = function() {
+      let string = "";
 
-        div += "<div class='item-sprite'"
-        div +=     "style='"
-        div +=         "background-image: url(" + this.url + "/sheets/" + this.spriteFile + ");"
-        div +=         "background-position:" + column*48 + "px " + row*48 + "px;"
-        div += "'></div>"
+      for (var i in this.stats) {
+        if (this.stats.hasOwnProperty(i)) {
+          string += "\n" + stats[i] + ": " + this.stats[i];
+        }
+      }
 
-
-        return div;
+      return string;
     }
 
     //Append Beutiful HTML Representation of 'item' to 'container'
@@ -172,7 +175,7 @@ function Item(xml, url){
     Item.prototype.drawItem = function(container) {
       container.append(
         //<div class="item-sprite" style="background-image: url(${this.url}/sheets/${this.spriteFile};background-position: ${(0 - (this.spriteRef >>> 4))*48}px ${(0 - (this.spriteRef & 0x00F))*48}px;"></div>
-`<div class="item" title="${this.id ? this.id : this.name}\n${this.desc}">
+`<div class="item" title="${this.id ? this.id : this.name}\n${this.desc}${this.stringifyStats()}">
   <h3 class="item-header">
     ${this.drawSprite()}
     <div class="item-name">${this.name}</div>
