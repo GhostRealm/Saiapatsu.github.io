@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>RotMG projectile preview generator</title>
+    <style media="screen">
+      body {
+        max-width: 800px;
+        margin: auto;
+        padding: 8px;
+      }
+      #input {
+        height: 50px;
+        border: 1px solid lightgrey;
+      }
+      #input:focus {
+        border: 1px dotted black;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>RotMG projectile preview generator</h1>
+    <fieldset>
+      <legend>Output</legend>
+      <div style="min-height: 100px">
+        <img id="output" width="" height=""><p id="info"></span>
+      </div>
+    </fieldset>
+    <fieldset>
+      <legend>Input</legend>
+      <p>Paste an image below, or use the Browse button. Some browsers let you drag and drop onto the Browse button</p>
+      <div id="input" contenteditable=""></div>
+      <form id="options">
+        <p><input type="file" multiple="multiple"></p>
+        <p><label><input type="checkbox" checked="">Rotated 45 degrees</label></p>
+        <p><label><input type="checkbox">Black is transparent</label></p>
+        <p><label><input type="number" value="5">Scale</label></p>
+      </form>
+    </fieldset>
+    <script type="text/javascript">
+      let output = document.getElementById("output");
+      let ecanvas = document.createElement("canvas");
+      let canvas = ecanvas.getContext("2d");
+      let screech = document.getElementById("info");
+      let eoptions = document.getElementById("options");
+      let options = {};
+
+      var handleInput;
+      {
+        let input = document.getElementById("input");
+        let browse = eoptions[0];
+        var sample = document.createElement("img");
+        sample.src = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAABGdBTUEAALGPC/xhBQAAAClJREFUGNNjYMAD/js5/ccp+fs/w3+cughKYjUaryTMTryS5HmFgYEBAI+WJefvYvMOAAAAAElFTkSuQmCC";
+
+        handleInput = function () {
+          let foo = input.lastChild;
+          while (foo) {
+            if (foo.nodeName === "IMG") {
+              break;
+            }
+            foo = foo.previousSibling;
+          }
+          if (foo) {
+            screech.innerHTML = drawProjectile(foo);
+          } else {
+            // no inputs!
+            // initialize with a sample projectile
+            drawProjectile(sample);
+            screech.innerHTML = "Load a projectile sprite";
+          }
+        }
+        input.addEventListener("blur", handleInput);
+
+        browse.addEventListener("change", () => {
+          let files = browse.files;
+          for (var i = 0; i < files.length; i++) {
+            let file = files[i];
+            if (file.type.match("image.*")) {
+              let fr = new FileReader;
+              fr.onload = function() {
+                let image = document.createElement("img");
+                image.src = this.result;
+                input.appendChild(image);
+                handleInput();
+              };
+              fr.readAsDataURL(file);
+            }
+          }
+        });
+      }
+
+      function readOptions() {
+        options.rotate = eoptions[1].checked;
+        options.mask = eoptions[2].checked;
+        options.scale = eoptions[3].value;
+        handleInput();
+      }
+      options.dscale = eoptions[3].defaultValue;
+      eoptions[1].addEventListener("change", readOptions);
+      eoptions[2].addEventListener("change", readOptions);
+      eoptions[3].addEventListener("change", readOptions);
+
+      function pushOutput() {
+        output.src = ecanvas.toDataURL();
+      }
+
+      function drawProjectile(source) {
+        let cw = 68;
+        let ch = 40;
+        let yo = 0;
+        let siz = 8 * (options.scale || options.dscale);
+        drawBg(cw, ch);
+        if (options.rotate) {
+          canvas.translate(cw / 2, - Math.floor(siz / Math.sqrt(2)) + ch / 2 + yo); // the -1 is a hack
+          canvas.rotate(45 * Math.PI / 180);
+          canvas.drawImage(source, 0, 0, 8, 8, 0, 0, siz, siz);
+        } else {
+          canvas.drawImage(source, 0, 0, 8, 8, (cw - siz) / 2, (ch - siz) / 2 + yo, siz, siz);
+        }
+        pushOutput();
+        return "Success";
+      }
+
+      var drawBg;
+      {
+        let slice = document.createElement("img");
+        slice.onload = function() {
+          drawBg = function (w, h) {
+            ecanvas.width = w;
+            ecanvas.height = h;
+            // these are placed here because setting the canvas's size seems to reset the state
+            canvas.mozImageSmoothingEnabled = false;
+            canvas.webkitImageSmoothingEnabled = false;
+            canvas.msImageSmoothingEnabled = false;
+            canvas.imageSmoothingEnabled = false;
+            let x1 = 3;
+            let y1 = 3;
+            let x2 = 4;
+            let y2 = 4;
+            let ww = slice.naturalWidth;
+            let hh = slice.naturalHeight;
+            let wm = x2 - x1;
+            let hm = y2 - y1;
+            canvas.drawImage(slice, 0, 0, x1, y1, 0, 0, x1, y1); // top left
+            canvas.drawImage(slice, x1, 0, wm, x1, x1, 0, w-ww+wm, y1); // top
+            canvas.drawImage(slice, x2, 0, x1, y1, w - x1, 0, x1, y1); // top right
+            canvas.drawImage(slice, 0, y1, x1, hm, 0, y1, x1, h-hh+hm); // left
+            canvas.drawImage(slice, x1, y1, wm, hm, x1, y1, w-ww+wm, h-hh+hm); // middle
+            canvas.drawImage(slice, x1+wm, y1, x1, hm, w-x1, y1, x1, h-hh+hm); // right
+            canvas.drawImage(slice, 0, y1+hm, x1, y1, 0, h-y1, x1, y1); // top left
+            canvas.drawImage(slice, x1, y1+hm, wm, x1, x1, h-y1, w-ww+wm, y1); // top
+            canvas.drawImage(slice, x2, y1+hm, x1, y1, w - x1, h-y1, x1, y1); // top right
+          }
+          // initialize
+          readOptions();
+          handleInput();
+        }
+        // background image 9-slice
+        slice.src = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAcAAAAHCAYAAADEUlfTAAAABGdBTUEAALGPC/xhBQAAACxJREFUCNdjYEACISEh/5H5jNgk1qxZwwiXRNcBU8CITQIGmBjwAPzG4nMQAKbFE/5lMK21AAAAAElFTkSuQmCC";
+      }
+
+    </script>
+  </body>
+</html>
