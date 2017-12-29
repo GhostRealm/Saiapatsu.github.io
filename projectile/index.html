@@ -74,7 +74,7 @@
         input.addEventListener("drop", () => {
           setTimeout(() => {
             handleInput();
-          }, 10);
+          }, 100);
         });
         input.addEventListener("blur", handleInput);
 
@@ -244,13 +244,21 @@
         }
 
         hcanvas.putImageData(imageData, 0, 0);
-        let scsiz = siz * scale;
         drawBg(cw, ch);
         if (options.rotate) {
+          // fix anti-aliased edges >:( what a HACK
+          let scsiz = (siz + 2) * scale;
+          let esource2 = document.createElement("canvas");
+          let source2 = esource2.getContext("2d");
+          esource2.width = siz + 2;
+          esource2.height = esource2.width;
+          source2.drawImage(source, 0, 0, siz, siz, 1, 1, siz, siz);
+
           canvas.translate(cw / 2 + xo, -Math.floor(scsiz / Math.sqrt(2)) + ch / 2 + yo);
           canvas.rotate(45 * Math.PI / 180);
-          canvas.drawImage(source, 0, 0, siz, siz, 0, 0, scsiz, scsiz);
+          canvas.drawImage(esource2, 0, 0, siz+2, siz+2, 0, 0, scsiz, scsiz);
         } else {
+          let scsiz = siz * scale;
           canvas.drawImage(source, 0, 0, siz, siz, (cw - scsiz + xo) / 2, (ch - scsiz + yo) / 2, scsiz, scsiz);
         }
         pushOutput();
