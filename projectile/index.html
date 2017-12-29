@@ -34,6 +34,7 @@
       <form id="options">
         <p><input type="file" multiple="multiple"></p>
         <p><label><input type="checkbox" checked="">Rotated 45 degrees</label></p>
+        <p><label><input type="checkbox" checked="">Keep a minimum size</label></p>
         <p><label><input type="checkbox">Black is transparent</label></p>
       </form>
     </fieldset>
@@ -100,11 +101,13 @@
 
       function readOptions() {
         options.rotate = eoptions[1].checked;
-        options.mask = eoptions[2].checked;
+        options.min = eoptions[2].checked;
+        options.mask = eoptions[3].checked;
         handleInput();
       }
       eoptions[1].addEventListener("change", readOptions);
       eoptions[2].addEventListener("change", readOptions);
+      eoptions[3].addEventListener("change", readOptions);
 
       function pushOutput() {
         output.src = ecanvas.toDataURL();
@@ -193,9 +196,9 @@
           // This was found by neural-network-like manual trial and error
           // Shoo fnord
           yo = Math.floor((bottom - top) / 4 * Math.sqrt(2) * scale);
-          ch = Math.floor(Math.max((siz*2 - top - bottom) / 2 * Math.sqrt(2) * scale + 12, 40));
+          ch = Math.floor(Math.max((siz*2 - top - bottom) / 2 * Math.sqrt(2) * scale + 12, options.min ? 40 : 12));
           xo = Math.floor((right - left) / 4 * Math.sqrt(2) * scale);
-          cw = Math.floor(Math.max((siz*2 - left - right) / 2 * Math.sqrt(2) * scale + 12, 68));
+          cw = Math.floor(Math.max((siz*2 - left - right) / 2 * Math.sqrt(2) * scale + 12, options.min ? 68 : 12));
         } else {
           let top = 0, bottom = 0, left = 0, right = 0;
           // top
@@ -238,9 +241,9 @@
             }
           }
           yo = (bottom - top) * scale; // distance to move in order to center sprite
-          ch = Math.max((siz - top - bottom) * scale + 12, 40);
+          ch = Math.max((siz - top - bottom) * scale + 12, options.min ? 40 : 12);
           xo = (right - left) * scale;
-          cw = Math.max((siz - left - right) * scale + 12, 68);
+          cw = Math.max((siz - left - right) * scale + 12, options.min ? 68 : 12);
         }
 
         hcanvas.putImageData(imageData, 0, 0);
