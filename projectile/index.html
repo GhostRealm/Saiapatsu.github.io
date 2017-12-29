@@ -244,7 +244,6 @@
         }
 
         hcanvas.putImageData(imageData, 0, 0);
-        // determine y offset
         let scsiz = siz * scale;
         drawBg(cw, ch);
         if (options.rotate) {
@@ -262,6 +261,14 @@
       {
         let slice = document.createElement("img");
         slice.onload = function() {
+          let x1 = 3;
+          let y1 = 3;
+          let x2 = 4;
+          let y2 = 4;
+          let ww = slice.naturalWidth;
+          let hh = slice.naturalHeight;
+          let wm = x2 - x1;
+          let hm = y2 - y1;
           drawBg = function (w, h) {
             ecanvas.width = w;
             ecanvas.height = h;
@@ -270,14 +277,6 @@
             canvas.webkitImageSmoothingEnabled = false;
             canvas.msImageSmoothingEnabled = false;
             canvas.imageSmoothingEnabled = false;
-            let x1 = 3;
-            let y1 = 3;
-            let x2 = 4;
-            let y2 = 4;
-            let ww = slice.naturalWidth;
-            let hh = slice.naturalHeight;
-            let wm = x2 - x1;
-            let hm = y2 - y1;
             canvas.drawImage(slice, 0, 0, x1, y1, 0, 0, x1, y1); // top left
             canvas.drawImage(slice, x1, 0, wm, x1, x1, 0, w-ww+wm, y1); // top
             canvas.drawImage(slice, x2, 0, x1, y1, w - x1, 0, x1, y1); // top right
