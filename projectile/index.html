@@ -28,7 +28,8 @@
     </fieldset>
     <fieldset>
       <legend>Input</legend>
-      <p>Paste an image below, or use the Browse button. Some browsers let you drag and drop onto the Browse button</p>
+      <p>Paste an image below, or use the Browse button. Some browsers let you drag and drop onto the Browse button.<br>
+      The sprite must be 8x8 or 16x16, including any empty space.</p>
       <div id="input" contenteditable=""></div>
       <form id="options">
         <p><input type="file" multiple="multiple"></p>
@@ -67,7 +68,7 @@
             // no inputs!
             // initialize with a sample projectile
             drawProjectile(sample);
-            screech.innerHTML = "Load a projectile sprite";
+            screech.innerHTML = "No sprite loaded";
           }
         }
         input.addEventListener("drop", () => {
@@ -86,8 +87,10 @@
               fr.onload = function() {
                 let image = document.createElement("img");
                 image.src = this.result;
-                input.appendChild(image);
-                handleInput();
+                image.onload = function() {
+                  input.appendChild(image);
+                  handleInput();
+                }
               };
               fr.readAsDataURL(file);
             }
