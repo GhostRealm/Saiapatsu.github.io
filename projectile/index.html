@@ -128,13 +128,12 @@
               pixelData[i+3] = 0;
             }
           }
-          hcanvas.putImageData(imageData, 0, 0);
         }
-        let yo, ch;
-        let cw = 68;
+        let yo, ch, xo, cw;
 
         if (options.rotate) {
-          let top = 0, bottom = 0;
+          let top = 0, bottom = 0, left = 0, right = 0;
+          // top
           for (var i = 0; i < siz; i++) {
             for (var j = 0; j <= i; j++) {
               let pos = ((i - j) * siz + j) * 4;
@@ -146,6 +145,7 @@
               }
             }
           }
+          // bottom
           for (var i = 1; i <= siz; i++) {
             for (var j = 1; j <= i; j++) {
               let pos = ((siz*siz - ((i - j) * siz + j)) * 4);
@@ -158,11 +158,42 @@
               }
             }
           }
+          // left
+          for (var x = 0; x <= siz; x++) {
+            for (var y = 0; y <= x; y++) {
+              // let xx = x - y;
+              // let yy = siz - y;
+              let pos = ((siz - y) * siz + x - y) * 4
+              // pixelData[pos+1] = (x) / siz * 255; // debug
+              if (pixelData[pos+3] === 255) {
+                left = x - 1;
+                x = siz+siz;
+                break;
+              }
+            }
+          }
+          // right
+          for (var x = 0; x <= siz - 1; x++) {
+            for (var y = 0; y <= x; y++) {
+              // let xx = x - y;
+              // let yy = siz - y;
+              let pos = ((x - y) * siz + siz - y - 1) * 4 // y and x swapped
+              // pixelData[pos+2] = (x) / siz * 255; // debug
+              if (pixelData[pos+3] === 255) {
+                right = x;
+                x = siz+siz;
+                break;
+              }
+            }
+          }
+
           // This was found by neural-network-like manual trial and error
           // Shoo fnord
+          console.log(left, right);
           yo = Math.floor((bottom - top) / 4 * Math.sqrt(2) * scale);
           ch = Math.floor(Math.max((siz*2 - top - bottom) / 2 * Math.sqrt(2) * scale + 12, 40));
-          hcanvas.putImageData(imageData, 0, 0);
+          xo = Math.floor((right - left) / 4 * Math.sqrt(2) * scale);
+          cw = Math.floor(Math.max((siz*2 - left - right) / 2 * Math.sqrt(2) * scale + 12, 68));
         } else {
           let top = 0, bottom = 0, left = 0, right = 0;
           // top
@@ -180,44 +211,46 @@
             }
           }
           //left
-          // for (var x = 0; x < siz; x++) {
-          //   for (var y = 0; y < siz; y++) {
-          //     let pos = (x * siz + y) * 4
-          //     if (pixelData[pos+3] === 255) {
-          //       left = x;
-          //       pixelData[pos+1] = 255; // debug
-          //       x = siz + siz;
-          //       break;
-          //     }
-          //   }
-          // }
-          // // right
-          // for (var x = siz; x > 0; x--) {
-          //   for (var y = 0; y < siz; y++) {
-          //     let pos = (x * siz + y) * 4
-          //     if (pixelData[pos+3] === 255) {
-          //       left = siz - x;
-          //       pixelData[pos+1] = 255; // debug
-          //       x = 0;
-          //       break;
-          //     }
-          //   }
-          // }
-          // console.log(left, right);
+          for (var x = 0; x < siz; x++) {
+            for (var y = 0; y < siz; y++) {
+              let pos = (y * siz + x) * 4
+              // pixelData[pos+1] = 255; // debug
+              if (pixelData[pos+3] === 255) {
+                left = x;
+                x = siz + siz;
+                break;
+              }
+              // pixelData[pos+3] = 0; // debug
+            }
+          }
+          // right
+          for (var x = siz-1; x > 0; x--) {
+            for (var y = 0; y < siz; y++) {
+              let pos = (y * siz + x) * 4
+              if (pixelData[pos+3] === 255) {
+                right = siz - x - 1;
+                x = 0;
+                break;
+              }
+              // pixelData[pos+3] = 0; // debug
+            }
+          }
           yo = (bottom - top) * scale; // distance to move in order to center sprite
           ch = Math.max((siz - top - bottom) * scale + 12, 40);
-          // hcanvas.putImageData(imageData, 0, 0);
+          xo = (right - left) * scale;
+          cw = Math.max((siz - left - right) * scale + 12, 68);
         }
 
+        hcanvas.putImageData(imageData, 0, 0);
         // determine y offset
         let scsiz = siz * scale;
         drawBg(cw, ch);
         if (options.rotate) {
-          canvas.translate(cw / 2, -Math.floor(scsiz / Math.sqrt(2)) + ch / 2 + yo);
+          canvas.translate(cw / 2 + xo, -Math.floor(scsiz / Math.sqrt(2)) + ch / 2 + yo);
           canvas.rotate(45 * Math.PI / 180);
           canvas.drawImage(source, 0, 0, siz, siz, 0, 0, scsiz, scsiz);
         } else {
-          canvas.drawImage(source, 0, 0, siz, siz, (cw - scsiz) / 2, (ch - scsiz + yo) / 2, scsiz, scsiz);
+          canvas.drawImage(source, 0, 0, siz, siz, (cw - scsiz + xo) / 2, (ch - scsiz + yo) / 2, scsiz, scsiz);
         }
         pushOutput();
         return "Success";
