@@ -34,13 +34,14 @@
         <p><input type="file" multiple="multiple"></p>
         <p><label><input type="checkbox" checked="">Rotated 45 degrees</label></p>
         <p><label><input type="checkbox">Black is transparent</label></p>
-        <p><label><input type="number" value="5">Scale</label></p>
       </form>
     </fieldset>
     <script type="text/javascript">
       let output = document.getElementById("output");
       let ecanvas = document.createElement("canvas");
       let canvas = ecanvas.getContext("2d");
+      let ehcanvas = document.createElement("canvas");
+      let hcanvas = ehcanvas.getContext("2d");
       let screech = document.getElementById("info");
       let eoptions = document.getElementById("options");
       let options = {};
@@ -69,6 +70,11 @@
             screech.innerHTML = "Load a projectile sprite";
           }
         }
+        input.addEventListener("drop", () => {
+          setTimeout(() => {
+            handleInput();
+          }, 10);
+        });
         input.addEventListener("blur", handleInput);
 
         browse.addEventListener("change", () => {
@@ -92,30 +98,126 @@
       function readOptions() {
         options.rotate = eoptions[1].checked;
         options.mask = eoptions[2].checked;
-        options.scale = eoptions[3].value;
         handleInput();
       }
-      options.dscale = eoptions[3].defaultValue;
       eoptions[1].addEventListener("change", readOptions);
       eoptions[2].addEventListener("change", readOptions);
-      eoptions[3].addEventListener("change", readOptions);
 
       function pushOutput() {
         output.src = ecanvas.toDataURL();
       }
 
       function drawProjectile(source) {
+        // apply some requirements
+        if (source.naturalWidth != source.naturalHeight || !(source.naturalWidth === 8 || source.naturalHeight === 8 || source.naturalWidth === 16 || source.naturalHeight === 16)) {
+          return "Not 8x8 or 16x16"
+        }
+        let siz = source.naturalWidth;
+        let scale = 5;
+        ehcanvas.width = siz;
+        ehcanvas.height = siz;
+        hcanvas.drawImage(source, 0, 0);
+        source = ehcanvas;
+        let imageData = hcanvas.getImageData(0, 0, siz, siz);
+        let pixelData = imageData.data;
+
+        // knock away the black areas
+        if (options.mask) {
+          for (var i = 0; i < pixelData.length; i+=4) {
+            if (pixelData[i] == 0 && pixelData[i+1] == 0 && pixelData[i+2] == 0) {
+              pixelData[i+3] = 0;
+            }
+          }
+          hcanvas.putImageData(imageData, 0, 0);
+        }
+        let yo, ch;
         let cw = 68;
-        let ch = 40;
-        let yo = 0;
-        let siz = 8 * (options.scale || options.dscale);
+
+        if (options.rotate) {
+          let top = 0, bottom = 0;
+          for (var i = 0; i < siz; i++) {
+            for (var j = 0; j <= i; j++) {
+              let pos = ((i - j) * siz + j) * 4;
+              if (pixelData[pos+3] === 255) {
+                top = i;
+                // pixelData[pos+2] = 255; // debug
+                i = siz+siz;
+                break;
+              }
+            }
+          }
+          for (var i = 1; i <= siz; i++) {
+            for (var j = 1; j <= i; j++) {
+              let pos = ((siz*siz - ((i - j) * siz + j)) * 4);
+              if (pixelData[pos+3] === 255) {
+                i = i - 1;
+                bottom = i;
+                // pixelData[pos+1] = 255; // debug
+                i = siz+siz;
+                break;
+              }
+            }
+          }
+          // This was found by neural-network-like manual trial and error
+          // Shoo fnord
+          yo = Math.floor((bottom - top) / 4 * Math.sqrt(2) * scale);
+          ch = Math.floor(Math.max((siz*2 - top - bottom) / 2 * Math.sqrt(2) * scale + 12, 40));
+          hcanvas.putImageData(imageData, 0, 0);
+        } else {
+          let top = 0, bottom = 0, left = 0, right = 0;
+          // top
+          for (var i = 0; i < pixelData.length; i+=4) {
+            if (pixelData[i+3] === 255) {
+              top = Math.floor((i>>2) / siz);
+              break;
+            }
+          }
+          // bottom
+          for (var i = pixelData.length - 1; i > 0; i-=4) {
+            if (pixelData[i] === 255) {
+              bottom = Math.floor(siz - ((i+1)>>2) / siz);
+              break;
+            }
+          }
+          //left
+          // for (var x = 0; x < siz; x++) {
+          //   for (var y = 0; y < siz; y++) {
+          //     let pos = (x * siz + y) * 4
+          //     if (pixelData[pos+3] === 255) {
+          //       left = x;
+          //       pixelData[pos+1] = 255; // debug
+          //       x = siz + siz;
+          //       break;
+          //     }
+          //   }
+          // }
+          // // right
+          // for (var x = siz; x > 0; x--) {
+          //   for (var y = 0; y < siz; y++) {
+          //     let pos = (x * siz + y) * 4
+          //     if (pixelData[pos+3] === 255) {
+          //       left = siz - x;
+          //       pixelData[pos+1] = 255; // debug
+          //       x = 0;
+          //       break;
+          //     }
+          //   }
+          // }
+          // console.log(left, right);
+          yo = (bottom - top) * scale; // distance to move in order to center sprite
+          ch = Math.max((siz - top - bottom) * scale + 12, 40);
+          // hcanvas.putImageData(imageData, 0, 0);
+        }
+
+        // determine y offset
+        let scsiz = siz * scale;
         drawBg(cw, ch);
         if (options.rotate) {
-          canvas.translate(cw / 2, - Math.floor(siz / Math.sqrt(2)) + ch / 2 + yo); // the -1 is a hack
+          canvas.translate(cw / 2, -Math.floor(scsiz / Math.sqrt(2)) + ch / 2 + yo);
           canvas.rotate(45 * Math.PI / 180);
-          canvas.drawImage(source, 0, 0, 8, 8, 0, 0, siz, siz);
+          canvas.drawImage(source, 0, 0, siz, siz, 0, 0, scsiz, scsiz);
         } else {
-          canvas.drawImage(source, 0, 0, 8, 8, (cw - siz) / 2, (ch - siz) / 2 + yo, siz, siz);
+          canvas.drawImage(source, 0, 0, siz, siz, (cw - scsiz) / 2, (ch - scsiz + yo) / 2, scsiz, scsiz);
         }
         pushOutput();
         return "Success";
@@ -153,7 +255,6 @@
           }
           // initialize
           readOptions();
-          handleInput();
         }
         // background image 9-slice
         slice.src = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAcAAAAHCAYAAADEUlfTAAAABGdBTUEAALGPC/xhBQAAACxJREFUCNdjYEACISEh/5H5jNgk1qxZwwiXRNcBU8CITQIGmBjwAPzG4nMQAKbFE/5lMK21AAAAAElFTkSuQmCC";
